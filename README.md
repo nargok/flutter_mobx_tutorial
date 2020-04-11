@@ -52,5 +52,5 @@ class Counter = _Counter with _$Counter;
 こうすると、`@observable`とか、`@action`を使える
 
 ## References
-https://www.youtube.com/watch?v=p-MUBLOEkCs
+https://www.youtube.com/watch?v=p-MUBLOEkCs  
 https://itome.team/blog/2019/12/flutter-advent-calendar-day23/
