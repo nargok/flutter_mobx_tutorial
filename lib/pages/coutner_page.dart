@@ -1,7 +1,11 @@
+import 'package:mobxtutorial/store/counter/counter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
 class CounterPage extends StatelessWidget {
+  final Counter counter = Counter();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,19 +20,21 @@ class CounterPage extends StatelessWidget {
               'Counter',
               style: TextStyle(fontSize: 30.0),
             ),
-            Text(
-              '0',
-              style: TextStyle(fontSize: 42.0),
+            Observer(
+              builder: (_) => Text(
+                '${counter.count}',
+                style: TextStyle(fontSize: 42.0),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 FlatButton.icon(
-                    onPressed: () {},
+                    onPressed: counter.increment,
                     icon: Icon(Icons.add),
                     label: Text('Add')),
                 FlatButton.icon(
-                    onPressed: () {},
+                    onPressed: counter.decrement,
                     icon: Icon(Icons.remove),
                     label: Text('MInus')),
               ],
