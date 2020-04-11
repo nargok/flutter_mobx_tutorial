@@ -18,5 +18,8 @@ abstract class _Counter with Store {
     count--;
   }
 
-  // todo resetを追加する
+  @action
+  void reset() {
+    count = 0;
+  }
 }

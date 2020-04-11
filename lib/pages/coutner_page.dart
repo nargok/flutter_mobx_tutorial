@@ -36,7 +36,11 @@ class CounterPage extends StatelessWidget {
                 FlatButton.icon(
                     onPressed: counter.decrement,
                     icon: Icon(Icons.remove),
-                    label: Text('MInus')),
+                    label: Text('Minus')),
+                FlatButton.icon(
+                    onPressed: counter.reset,
+                    icon: Icon(Icons.exposure_zero),
+                    label: Text('Reset')),
               ],
             )
           ],
