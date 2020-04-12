@@ -42,13 +42,13 @@ dev_dependencies:
 ```
 $ flutter packages pub run build_runner watch
 ```
-このコマンド実行により、counter.g.dartというファイルが作成される
-その後、↓の2行を追加する
+このコマンド実行して、↓の2行を追加する
 ```dart
 part 'counter.g.dart';
 class Counter = _Counter with _$Counter;
 ```
 
+その後、counter.g.dartというファイルが生成される
 こうすると、`@observable`とか、`@action`を使える
 
 ## References
